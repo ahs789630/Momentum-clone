@@ -1,0 +1,81 @@
+@import 'reset.css';
+
+.hidden {
+    display: none;
+}
+
+body {
+    margin: 0;
+    position: relative;
+  }
+
+.bgi {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#weather {
+    position: absolute;
+    z-index: 1;
+    top: 8px;
+    right: 8px;
+    color: white
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: white;
+}
+
+.wrapper-clock{
+    font-size: 100px;
+    margin: 10px;
+}
+
+.wrapper-clock h2{
+    margin: auto;
+}
+
+#greeting {
+    font-size: 50px;
+}
+
+#logout-form {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    border: none;
+    background-color: transparent;
+}
+
+#input {
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid white;
+    height: 50px;
+    font-size: 40px;
+    color: white;
+}
+#input:focus {
+    outline: none;
+}
+
+#todo-form {
+    display: flex;
+    flex-direction: column;
+    font-size: 40px;
+}
+#quote {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    color: white;
+}
