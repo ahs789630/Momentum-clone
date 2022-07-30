@@ -1,8 +1,8 @@
-const loginForm = document.querySelector("#login-form ");
+const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector('#login-form input');
 const greeting = document.querySelector('#greeting');
 const logoutForm = document.querySelector('#logout-form');
-
+const wrapperLogin = document.querySelector('.wrapper-login');
 const HIDDEN_CLASSNAME= "hidden";
 const USERNAME_KEY ='username';
 
@@ -36,5 +36,6 @@ if(savedUsername === null) {
 else{
     paintGreetings();
     logoutForm.classList.remove(HIDDEN_CLASSNAME);
+    wrapperLogin.classList.add(HIDDEN_CLASSNAME);
 }
 logoutForm.addEventListener('submit',onLogoutSubmit);    

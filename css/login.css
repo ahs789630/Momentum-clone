@@ -1,0 +1,41 @@
+#login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#login-form input{
+    margin-bottom: 15px;
+    font-size: 50px;
+}
+
+#login-form span{
+    margin-bottom: 15px;
+    font-size: 50px;
+}
+
+#login-form button {
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    color: white;
+}
+
+#login-form button:hover {
+    outline: none;
+    color: rgb(245, 214, 176);
+    transition: 0.5s ease-in-out;
+}
+
+#logout-form button{
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    color: white;
+}
+
+#logout-form button:hover {
+    outline: none;
+    color: rgb(245, 214, 176);
+    transition: 0.5s ease-in-out;
+}

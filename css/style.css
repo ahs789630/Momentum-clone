@@ -1,21 +1,17 @@
 @import 'reset.css';
+@import 'login.css';
+@import 'background.css';
+@import 'quote.css';
 
-.hidden {
-    display: none;
+html, body{
+    height: 100%;
 }
-
 body {
     margin: 0;
     position: relative;
   }
-
-.bgi {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
+.hidden {
+    display: none;
 }
 
 #weather {
@@ -41,7 +37,9 @@ body {
 }
 
 .wrapper-clock h2{
-    margin: auto;
+    margin-bottom: 30px;
+    font-size: 160px;
+
 }
 
 #greeting {
@@ -56,7 +54,7 @@ body {
     background-color: transparent;
 }
 
-#input {
+.input {
     border: none;
     background-color: transparent;
     border-bottom: 2px solid white;
@@ -64,7 +62,7 @@ body {
     font-size: 40px;
     color: white;
 }
-#input:focus {
+.input:focus {
     outline: none;
 }
 

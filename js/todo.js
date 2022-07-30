@@ -1,7 +1,7 @@
 const toDoForm = document.querySelector('#todo-form');
 const toDoInput = toDoForm.querySelector('input');
 const toDoList = document.querySelector('#todo-list');
-
+const toDoText = document.querySelector('#todo-form span');
 const TODOS_KEY= 'todos';
 
 let toDos= [];
@@ -52,3 +52,12 @@ if(savedTodos){
     parsedToDos.forEach(paintToDo);
 }
 
+if(savedUsername === null) {
+    toDoText.classList.add(HIDDEN_CLASSNAME);
+    toDoInput.classList.add(HIDDEN_CLASSNAME);
+    
+}
+else{
+    toDoText.classList.remove(HIDDEN_CLASSNAME);
+    toDoInput.classList.remove(HIDDEN_CLASSNAME);
+}

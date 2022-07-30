@@ -49,3 +49,13 @@ const todaysQuote = quotes[Math.floor(Math.random()*quotes.length)];
 
 quote.innerText = todaysQuote.quote;
 author.innerText = todaysQuote.author;
+
+if(savedUsername === null) {
+    quote.classList.add(HIDDEN_CLASSNAME);
+    author.classList.add(HIDDEN_CLASSNAME);
+    
+}
+else{
+    quote.classList.remove(HIDDEN_CLASSNAME);
+    author.classList.remove(HIDDEN_CLASSNAME);
+}
