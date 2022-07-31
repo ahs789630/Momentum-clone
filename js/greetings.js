@@ -12,6 +12,10 @@ function onLoginSubmit(event) {
     logoutForm.classList.remove(HIDDEN_CLASSNAME);
     localStorage.setItem(USERNAME_KEY,loginInput.value);
     paintGreetings();
+    paintQuotes();
+    getClock();
+    toDo();
+    setInterval(getClock, 1000);
 }
 
 function onLogoutSubmit() {
@@ -22,6 +26,8 @@ function paintGreetings() {
     const username = localStorage.getItem(USERNAME_KEY);
     greeting.innerText = `Hello ${username}`
     greeting.classList.remove(HIDDEN_CLASSNAME);
+    logoutForm.classList.remove(HIDDEN_CLASSNAME);
+    wrapperLogin.classList.add(HIDDEN_CLASSNAME);
 }
 
 
@@ -31,11 +37,8 @@ const savedUsername = localStorage.getItem(USERNAME_KEY);
 if(savedUsername === null) {
     loginForm.classList.remove(HIDDEN_CLASSNAME);
     loginForm.addEventListener('submit', onLoginSubmit);
-    greeting.classList.add(HIDDEN_CLASSNAME);
 }
 else{
-    paintGreetings();
-    logoutForm.classList.remove(HIDDEN_CLASSNAME);
-    wrapperLogin.classList.add(HIDDEN_CLASSNAME);
+    paintGreetings(); 
 }
 logoutForm.addEventListener('submit',onLogoutSubmit);    

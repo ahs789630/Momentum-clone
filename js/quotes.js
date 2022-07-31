@@ -42,20 +42,26 @@ const quotes = [
     }
     ]; 
 
+
+
+const todaysQuote = quotes[Math.floor(Math.random()*quotes.length)];
 const quote = document.querySelector('#quote span:first-child');
 const author = document.querySelector('#quote span:last-child');
 
-const todaysQuote = quotes[Math.floor(Math.random()*quotes.length)];
 
-quote.innerText = todaysQuote.quote;
-author.innerText = todaysQuote.author;
+
+function paintQuotes() {
+    quote.innerText = todaysQuote.quote;
+    author.innerText = todaysQuote.author;
+    quote.classList.remove(HIDDEN_CLASSNAME);
+    author.classList.remove(HIDDEN_CLASSNAME);
+}
+
 
 if(savedUsername === null) {
     quote.classList.add(HIDDEN_CLASSNAME);
     author.classList.add(HIDDEN_CLASSNAME);
-    
 }
 else{
-    quote.classList.remove(HIDDEN_CLASSNAME);
-    author.classList.remove(HIDDEN_CLASSNAME);
+   paintQuotes();
 }

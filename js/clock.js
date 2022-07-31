@@ -1,5 +1,6 @@
-const clock = document.querySelector('h2#clock');
+const clock = document.querySelector('#clock');
 function getClock(){
+    clock.classList.remove(HIDDEN_CLASSNAME);
     const date = new Date;
     const hours = String(date.getHours()).padStart(2,'0');
     const minutes = String(date.getMinutes()).padStart(2,'0');
@@ -9,12 +10,10 @@ function getClock(){
 
 if(savedUsername === null) {
     clock.classList.add(HIDDEN_CLASSNAME);
-    
 }
 else{
-    clock.classList.remove(HIDDEN_CLASSNAME);
+    getClock();
+    setInterval(getClock, 1000);
 }
 
-getClock();
-setInterval(getClock, 1000);
   
