@@ -3,6 +3,7 @@
 @import 'background.css';
 @import 'quote.css';
 @import 'todo.css';
+@import 'weather.css';
 
 html, body{
     height: 100%;
@@ -13,14 +14,6 @@ body {
   }
 .hidden {
     display: none;
-}
-
-#weather {
-    position: absolute;
-    z-index: 1;
-    top: 8px;
-    right: 8px;
-    color: white
 }
 
 .wrapper {

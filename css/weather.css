@@ -1,0 +1,7 @@
+#weather {
+    position: fixed;
+    z-index: 2;
+    top: 8px;
+    right: 8px;
+    color: white
+}
